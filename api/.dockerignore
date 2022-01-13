@@ -1,0 +1,5 @@
+node_modules
+.gitignore
+db.json
+Dockerfile
+README.md
