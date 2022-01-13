@@ -62,7 +62,7 @@
     - `docker kill $(docker ps -q)`  
 
 ## Commonly used commands in docker-compose:  
-  1. Build aand rebuild a image.    
+  1. Build and rebuild a image.    
     - `docker-compose up --build`  
     - `docker-compose -f "docker-compose.dev.yml" up --build`  
 
