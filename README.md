@@ -1,6 +1,6 @@
 # Docker Tutorial | Nodejs + Express + Mongodb + React + Redis + Nginx
 
-> How to use Docker to develop apps with Nodejs, Express, Mongodb, React and Redis.  
+> How to use Docker to build and develop Nodejs, Express, Mongodb, React, and Redis applications.     
 > How to use Docker with Nginx and Gitlab to automatically deploy to DigitalOcean.  
 
 ## Author: Dev A.T Viet Nam
