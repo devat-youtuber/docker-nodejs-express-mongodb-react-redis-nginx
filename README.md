@@ -1,16 +1,14 @@
 # Docker Tutorial | Nodejs + Express + Mongodb + React + Redis + Nginx
 
-> How to use Docker to develop apps with Nodejs, Express, Mongodb, React and Redis.  
+> How to use Docker to build and develop Nodejs, Express, Mongodb, React, and Redis applications.  
 > How to use Docker with Nginx and Gitlab to automatically deploy to DigitalOcean.  
 
 ## Author: Dev A.T Viet Nam
 
-## Youtube: https://youtu.be/Cl0lXkzMuuo
+## Youtube: https://youtu.be/VgA-Hf0xZPQ
 
-## Getting started: 
-> `cd api`   
-> `docker build -t devatvietnam/rest-api:v1 .`     
-> `docker run -it --rm --name rest-api -p 5000:5000 devatvietnam/rest-api:v1`   
+## Getting started with docker-compose(dev):
+> `docker-compose -f docker-compose.dev.yml up --build`
 
 ## 🔥 Donate
 > + 👉 Buy Me a Coffee . Thank You ! 💗 :
@@ -46,23 +44,44 @@
   7. Delete all images.  
     - `docker rmi $(docker images -q)`  
 
-  8. Show all running containers.         
+  8. Delete all <none> images.  
+    - `docker rmi $(docker images -f dangling=true -q)` 
+
+  9. Show all running containers.         
     - `docker ps`  
 
-  9. Show all containers.         
+  10. Show all containers.         
     - `docker ps -a`  
 
-  10. Delete a stopped container.         
+  11. Delete a stopped container.         
     - `docker rm "container-name"`  
 
-  11. Delete all stopped containers.         
+  12. Delete all stopped containers.         
     - `docker rm $(docker ps -a -q)`  
 
-  12. Kill all running containers.         
+  13. Kill all running containers.         
     - `docker kill $(docker ps -q)`  
 
+  14. List volumes.         
+    - `docker volume ls`
+
+  15. Remove all unused local volumes.         
+    - `docker volume prune`
+
+  16. Remove one or more volumes.         
+    - `docker volume rm "volume-name"`
+
+  17. Run commands in a docker container.         
+    - `docker exec -it "container-name" sh`
+
+  18. Push image to docker hub.         
+    - `docker push "image-name:tag"`
+
+  19. Pull image to docker hub.         
+    - `docker pull "image-name:tag"`
+
 ## Commonly used commands in docker-compose:  
-  1. Build aand rebuild a image.    
+  1. Build and rebuild a image.    
     - `docker-compose up --build`  
     - `docker-compose -f "docker-compose.dev.yml" up --build`  
 

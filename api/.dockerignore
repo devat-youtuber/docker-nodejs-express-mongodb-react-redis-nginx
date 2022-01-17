@@ -3,3 +3,6 @@ node_modules
 db.json
 Dockerfile
 README.md
+.env
+Dockerfile.dev 
+Dockerfile.prod

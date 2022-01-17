@@ -26,6 +26,9 @@ mongoose.connect(URI, {
 
 
 // Routes
+app.get('/', (req, res) => {
+  res.json({msg: "new function"})
+})
 app.use('/api', routes)
 
 

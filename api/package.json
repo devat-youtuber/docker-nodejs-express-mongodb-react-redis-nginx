@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "dev": "ts-node-dev src/index.ts",
+    "dev": "ts-node-dev --poll src/index.ts",
+    "//": "nodemon -L src/index.ts",
     "build": "tsc"
   },
   "keywords": [],
