@@ -77,7 +77,7 @@
   18. Push image to docker hub.         
     - `docker push "image-name:tag"`
 
-  19. Pull image to docker hub.         
+  19. Pull image from docker hub.         
     - `docker pull "image-name:tag"`
 
 ## Commonly used commands in docker-compose:  

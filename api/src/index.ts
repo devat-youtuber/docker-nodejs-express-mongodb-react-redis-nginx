@@ -4,6 +4,8 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 import morgan from 'morgan'
 import routes from './routes'
+// Redis
+import RedisClient from './lib/redis'
 
 dotenv.config()
 const app = express()
@@ -26,9 +28,11 @@ mongoose.connect(URI, {
 
 
 // Routes
-app.get('/', (req, res) => {
-  res.json({msg: "new function"})
+app.get('/', async (req, res) => {
+  const value = await RedisClient.get('key');
+  res.json({value})
 })
+
 app.use('/api', routes)
 
 
