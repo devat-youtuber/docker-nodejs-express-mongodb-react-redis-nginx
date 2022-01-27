@@ -124,9 +124,7 @@
 
   2. Give it permissions to execute       
     - `sudo chmod +x /usr/local/bin/gitlab-runner`        
-    - `sudo nano /etc/sudoers`        
-    - `gitlab-runner ALL=(ALL) NOPASSWD: ALL`          
-
+             
   3. Create a GitLab CI user  
     - `sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash`      
 
@@ -139,6 +137,8 @@
 
   6. Add gitlab-runner to the docker group       
     - `sudo usermod -aG docker gitlab-runner` 
+    - `sudo nano /etc/sudoers`        
+    - `gitlab-runner ALL=(ALL) NOPASSWD: ALL` 
 
   7. Fix bug.
     - `sudo nano /home/gitlab-runner/.bash_logout`       
