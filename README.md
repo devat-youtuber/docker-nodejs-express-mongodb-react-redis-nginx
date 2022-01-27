@@ -5,7 +5,7 @@
 
 ## Author: Dev A.T Viet Nam
 
-## Youtube: https://youtu.be/Cl0lXkzMuuo
+## Youtube: https://youtu.be/lXkV2MfHWv4
 
 ## Getting started with docker-compose(dev):
 > `docker-compose -f docker-compose.dev.yml up --build`
