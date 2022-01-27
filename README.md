@@ -136,9 +136,9 @@
     - `sudo gitlab-runner register --url https://gitlab.com/ --registration-token "registration_token"`  
 
   6. Add gitlab-runner to the docker group       
-    - `sudo usermod -aG docker gitlab-runner` 
+    - `sudo usermod -aG docker gitlab-runner`       
     - `sudo nano /etc/sudoers`        
-    - `gitlab-runner ALL=(ALL) NOPASSWD: ALL` 
+    - `gitlab-runner ALL=(ALL) NOPASSWD: ALL`      
 
   7. Fix bug.
     - `sudo nano /home/gitlab-runner/.bash_logout`       
