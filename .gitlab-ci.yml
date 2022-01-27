@@ -1,0 +1,15 @@
+image:
+  name: docker/compose:latest
+services:
+    - docker:dind
+before_script:
+    - docker version
+    - docker-compose version
+build:
+    stage: build
+    only:
+        - main
+    script:
+        - docker-compose -f docker-compose.prod.yml down
+        - docker-compose -f docker-compose.prod.yml up -d --build
+        - docker rmi $(docker images -f dangling=true -q)

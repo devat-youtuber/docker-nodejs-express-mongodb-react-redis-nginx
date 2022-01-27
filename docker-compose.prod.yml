@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.3'
 
 services:
   api-prod:
@@ -9,10 +9,9 @@ services:
       dockerfile: Dockerfile.prod
     ports:
       - 5000:5000
-    env_file:
-      - ./api/.env
-    # environment:
-    #   - MONGODB_URL=mongodb://mongo:27017/restAPI
+    environment:
+      - MONGODB_URL=mongodb://mongo:27017/restAPI
+      - REDIS_URL=redis://redis:6379
     depends_on:
       - mongo
       - redis
