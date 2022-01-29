@@ -5,7 +5,7 @@
 
 ## Author: Dev A.T Viet Nam
 
-## Youtube: https://youtu.be/Cl0lXkzMuuo
+## Youtube: https://youtu.be/pDl3vPAAES8
 
 ## Getting started with docker-compose(dev):
 > `docker-compose -f docker-compose.dev.yml up --build`
@@ -30,6 +30,8 @@
 [III. Setup gitlab-runner](#Three) 
 
 [IV. Commonly used commands in Linux](#Four) 
+
+[V. How To Secure a Containerized Node.js Application](https://www.digitalocean.com/community/tutorials/how-to-secure-a-containerized-node-js-application-with-nginx-let-s-encrypt-and-docker-compose?fbclid=IwAR1gU2v8wkZkIqHSQLK5S5-NXbqsomJyY1JuX-8Oz51mcd2xba4Y0YVIxj4)
 
 
 <a name="One"></a>
@@ -124,7 +126,9 @@
 
   2. Give it permissions to execute       
     - `sudo chmod +x /usr/local/bin/gitlab-runner`        
-             
+    - `sudo nano /etc/sudoers`        
+    - `gitlab-runner ALL=(ALL) NOPASSWD: ALL`          
+
   3. Create a GitLab CI user  
     - `sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash`      
 
@@ -136,13 +140,9 @@
     - `sudo gitlab-runner register --url https://gitlab.com/ --registration-token "registration_token"`  
 
   6. Add gitlab-runner to the docker group       
-    - `sudo usermod -aG docker gitlab-runner`     
-  
-  7. Grant sudo permissions to the gitlab-runner user.              
-    - `sudo nano /etc/sudoers`        
-    - `gitlab-runner ALL=(ALL) NOPASSWD: ALL`      
+    - `sudo usermod -aG docker gitlab-runner` 
 
-  8. Fix bug.             
+  7. Fix bug.
     - `sudo nano /home/gitlab-runner/.bash_logout`       
 
 
